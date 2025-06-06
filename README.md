@@ -1,28 +1,101 @@
-# 🌲 Cypress, do Zero à Nuvem ☁️
+# Cypress, do Zero à Nuvem
 
-👋 Seja bem-vindo(a)!
+Este projeto é um exemplo prático para o curso **"Cypress, do Zero à Nuvem"**, demonstrando a utilização do Cypress para automação de testes web, cobrindo desde os fundamentos até cenários mais avançados, com foco na execução em diferentes ambientes, incluindo mobile.
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai amar esse curso. ❤️
+---
 
-## O que você vai aprender?
+## Pré-requisitos
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar upload de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
-- Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
-- Como executar os testes em um _workflow_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como integrar seu _workflow_ de integração contínua com o Cypress Cloud (o serviço de gestão de testes do Cypress na nuvem)
+Para executar este projeto, você precisará ter as seguintes ferramentas instaladas em sua máquina:
 
-## Vamos começar?
+* **Git**: `2.45.1` ou superior (lts).
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+* **Node.js**: `22.13.1` ou superior (lts).
 
-___
+* **npm** (Node Package Manager): `11.4.1` ou superior (lts).
 
-Este é um curso da **Escola Talking About Testing**.
+* **Cypress**: A versão utilizada no projeto é `13.12.0`. Será instalado automaticamente ao rodar `npm install`.
+
+* **IDE (Ambiente de Desenvolvimento Integrado)**: Recomenda-se o uso de um IDE como **Visual Studio Code** ou **WebStorm** para uma melhor experiência de desenvolvimento.
+
+---
+
+## Instalação
+
+Siga os passos abaixo para configurar o ambiente e instalar as dependências do projeto:
+
+1.  Clone este repositório para sua máquina local.
+
+2.  Navegue até a pasta raiz do projeto.
+
+3.  Execute o comando `npm install` (ou `npm i` para a versão curta) para instalar todas as dependências de desenvolvimento.
+
+```
+npm instal
+```
+
+---
+
+## Testes
+
+Este projeto oferece diferentes maneiras de executar os testes, tanto em modo interativo quanto em modo *headless* (sem interface gráfica), e também configurações para diferentes *viewports* (desktop e mobile).
+
+### Executar Testes em Modo Headless
+
+Para executar todos os testes em modo *headless*, use os seguintes comandos:
+
+* **Desktop**:
+
+    ```
+    npm test
+
+    ```
+
+* **Mobile** (com *viewport* configurado para dispositivos móveis):
+
+    ```
+    npm run test:mobile
+
+    ```
+
+### Abrir o Cypress em Modo Interativo
+
+Para abrir o Cypress App e executar os testes de forma interativa, você pode usar:
+
+* **Desktop**:
+
+    ```
+    npm run cy:open
+
+    ```
+
+* **Mobile** (com *viewport* configurado para dispositivos móveis):
+
+    ```
+    npm run cy:open:mobile
+
+    ```
+
+### Scripts de Execução
+
+Os scripts de execução estão definidos no arquivo `package.json` do projeto, como mostrado abaixo:
+
+```
+"scripts": {
+"cy:open": "cypress open",
+"cy:open:mobile": "cypress open --config viewportWidth=410,viewportHeight=860",
+"test": "cypress run",
+"test:mobile": "cypress run --config viewportWidth=410,viewportHeight=860"
+},
+```
+
+
+---
+
+## Suporte ao Projeto
+
+Se você gostou deste projeto e ele foi útil para você, considere deixar uma ⭐ para apoiar o trabalho!
+
+---
+
+Este projeto foi criado com 💚 para o curso **"Cypress, do Zero à Nuvem"**.
